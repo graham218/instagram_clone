@@ -19,6 +19,9 @@ export class Register extends Component {
         .then((result)=>{
             console.log(result);
         })
+        .catch((error)=>{
+            console.log(error);
+        })
     }
     render() {
         return (
