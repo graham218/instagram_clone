@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TextInput, View } from 'react-native';
+import { Button, TextInput, View } from 'react-native';
 
 export class Register extends Component {
     constructor(props){
@@ -15,7 +15,18 @@ export class Register extends Component {
         return (
             <View>
                 <TextInput 
-                    />
+                    placeholder="name"
+                    onChangeText={(name)=>this.setState({name})}/>
+                <TextInput 
+                    placeholder="email"
+                    onChangeText={(email)=>this.setState({email})}/>
+                <TextInput 
+                    placeholder="password"
+                    secureTextEntry={true}
+                    onChangeText={(password)=>this.setState({password})}/>
+                <Button
+                    onPress={()=>this.onSignUp()}
+                    title="Sign Up"/>
             </View>
         )
     }
