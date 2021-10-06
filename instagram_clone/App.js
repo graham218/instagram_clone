@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -22,13 +22,21 @@ if(firebase.apps.length===0){
 }
 
 const Stack=createStackNavigator();
-export default function App() {
-  return (
-    <NavigationContainer>
+
+export class App extends Component {
+  constructor(props){
+    
+  }
+  render() {
+    return (
+      <NavigationContainer>
       <Stack.Navigator initialRouteName="Landing">
         <Stack.Screen name="Landing" component={LandingScreen} options={{headerShown: false}}/>
         <Stack.Screen name="Register" component={RegisterScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
-  );
+    );
+  }
 }
+
+export default App;
