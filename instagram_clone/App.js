@@ -25,7 +25,26 @@ const Stack=createStackNavigator();
 
 export class App extends Component {
   constructor(props){
-    
+    super(props);
+    this.state={
+      loaded: false,
+    }
+  }
+
+  componentDidMount(){
+    firebase.auth().onAuthStateChanged((user)=>{
+      if(!user){
+        this.setState({
+          loggedIn: false,
+          loaded: true,
+        });
+      }else{
+        this.setState({
+          loggedIn: true,
+          loaded: true,
+        });
+      }
+    });
   }
   render() {
     return (
