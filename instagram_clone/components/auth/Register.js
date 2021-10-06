@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { TextInput, View } from 'react-native';
 
 export class Register extends Component {
     constructor(props){
@@ -12,9 +13,10 @@ export class Register extends Component {
 
     render() {
         return (
-            <div>
-                
-            </div>
+            <View>
+                <TextInput 
+                    />
+            </View>
         )
     }
 }
