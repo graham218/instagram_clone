@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Landing from './components/auth/Landing';
+import * as firebase from 'firebase';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAYK0Pii81cSuFqjBgeVobSunMdvN9mfbs",
