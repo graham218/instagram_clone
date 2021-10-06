@@ -15,6 +15,10 @@ const firebaseConfig = {
   measurementId: "G-TLFFVN451Y"
 };
 
+if(firebase.apps.length===0){
+  firebase.initializeApp(firebaseConfig);
+}
+
 const Stack=createStackNavigator();
 export default function App() {
   return (
