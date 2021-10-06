@@ -9,8 +9,12 @@ export class Register extends Component {
             password: '',
             name: ''
         }
+        this.onSignUp=this.onSignUp.bind(this);
     }
 
+    onSignUp(){
+
+    }
     render() {
         return (
             <View>
