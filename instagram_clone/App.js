@@ -10,6 +10,7 @@ import firebase from 'firebase';
 import rootReducer from './redux/reducers';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
 
 const store=createStore(rootReducer, applyMiddleware(thunk))
 
@@ -75,7 +76,9 @@ export class App extends Component {
     }
     
     return(
-      <MainScreen />
+      <Provider store={store}>
+        <MainScreen />
+      </Provider>
     );
   }
 }
